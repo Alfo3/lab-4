@@ -43,7 +43,7 @@ Para la ejecucion de rars, se debe de installar el archivo "rars1_6.jar" y tener
 
 Luego, abrir el archivo jar y entrar al programa.
 
-Una vez dentro de rars, ubicar el archivo "Desafio 1.asm" y "Desafio 2.asm"
+Una vez dentro de rars, ubicar el archivo "subsistema1" y "subsistema2.asm"
 
 Usar el icono de "assemble" y correr el codigo
 
