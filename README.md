@@ -8,8 +8,21 @@ Para este laboratorio se uso rars-1.6
 ---------------------------------
 ESPECIFICACION DE ALGORITMOS
 ---------------------------------
+Desafio 1:
+1. el algoritmo lee la entrada n que representa la cantidad de id a ingresar
+2. para cada id, aplica la funcion de collatz
+3. la recursion retorna el numero de pasos hasta llegar a 1
+4. con el numero de pasos, se clasifica el rango del id
+5. se imprime el id, la cantidad de pasos y el rango para cada id
 
-van aqui
+Desafio 2:
+1. lee una cadena de 16 caracteres
+2. capa 1: clasifica cada caracter en 1 de 4 categorias (mayuscula, minuscula, numero y signos especiales)
+3. se verifica que haya exactamente 4 de cada categoria
+4. capa 2: se divide en 4 bloques donde se calcula la suma de los codigos ascii, cuenta cuantas de estas sumas son impar y verifica si almenos 3 cumplen esta condicion
+5. capa 3: se recorren los 16 caracteres para calcular el hash total de la cadena, y se verifica si es mayor a 10000
+6. en caso de fallar en cualquier capa, se retorna un mensaje impreso con con el error y en el numero de capa que ocurrio el error, de lo contrario solo imprime un mensaje de exito.
+
 
 ---------------------------------
 SUPUESTOS DESAFIO 1
@@ -23,6 +36,8 @@ SUPUESTOS DESAFIO 1
 ---------------------------------
 SUPUESTOS DESAFIO 2
 ---------------------------------
+
+no hay supuestos
 
 ---------------------------------
 RECURSION DESAFIO 1
@@ -43,7 +58,13 @@ Antes de la recursion, la funcion guarda el contexto de la ejecucion en una pila
 ---------------------------------
 ESTRUCTURAS DESAFIO 2
 ---------------------------------
+El desafio 2 ocupa las siguientes 5 estructuras claves:
 
+1. buffer de entrada: Se utiliza como fuente para el análisis de tipos de caracteres, para la conformación de bloques de 4 bytes y para el cálculo del hash final
+2. tabla de caracteres especiales: Permite validar que los caracteres especiales utilizados por el usuario están dentro del conjunto autorizado
+3. Estructura con contadores para su clasificacion: La Capa 1 exige que todos los contadores sean exactamente 4, lo que impone una clasificación estricta de la clave
+4. Conjunto de constantes de configuración del sistema: permiten tener la estructura estricta necesaria para pasar de la segunda a la tercera capa
+5. Acumulador de hash: Registra el estado del hash incremental, y determina si supera el valor pedido de 10000
 
 ---------------------------------
 INSTRUCCIONES DE USO
