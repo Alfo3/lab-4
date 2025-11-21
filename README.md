@@ -28,6 +28,18 @@ SUPUESTOS DESAFIO 2
 RECURSION DESAFIO 1
 ---------------------------------
 
+CollatzRec se encarga de la recursion, lo hace a traves de los siguientes objetivos:
+1. avanzar en la secuancia para un numero n
+2. contar los pasos hasta llegar a la minimizacion (1)
+3. mantener el valor maximo ingresado en la secuencia
+4. retornar todo a traves de las llamadas
+
+Primero que nada se implementa el caso base (n = 1), si el numero ingresado es 1 o se llega a 1, el programa se salta los pasos de recursion
+
+Si el caso no es el base se actualiza el valor maximo, calcula el siguiente n segun collatz, incrementa en 1 los pasos y se vuelve a llamar a si misma con jal
+
+Antes de la recursion, la funcion guarda el contexto de la ejecucion en una pila, luego de una llamada recursiva esta pila se va restaurando en orden que fueron agregadas, y asi es como logra avanzar hasta el caso base y retornar el total de pasos, y con esta informacion catalogar el rango
+
 ---------------------------------
 ESTRUCTURAS DESAFIO 2
 ---------------------------------
